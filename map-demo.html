@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.42.1/mapbox-gl.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script src="https://api.mapbox.com/mapbox-gl-js/v0.42.1/mapbox-gl.js"></script>
+
+<script>
+
+
+    mapboxgl.accessToken = 'pk.eyJ1IjoidXNhbWFtdWdoYWw5NSIsImEiOiJjbDQ1YXJmNjQwZjV2M2RuaXhzdm1pYjJ2In0.g-M02P6auU6mcxzUMAwVaA';
+
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v8',
+        center: [-97.38, 42.87774],
+        zoom: 8
+    });
+
+    /**
+     * Renders Buildings in USA
+     */
+ 
+        map.on('load', function () {
+            map.addControl(new mapboxgl.FullscreenControl());
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', "https://raw.githubusercontent.com/osamarehman/osamarehman/main/export.geojson");
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.setRequestHeader('X-PINGOTHER', 'pingpong');
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    var data = JSON.parse(xhr.responseText);
+                    console.log(data);
+                    map.addLayer({
+                        "id": "apartment",
+                        "type": "symbol",
+                        "source": {
+                            "type": "geojson",
+                            "data": data
+                        }
+                    });
+
+                }
+            };
+            xhr.send();
+            
+
+        })
+    
+
+   
+    
+
+    
+    
+
+
+
+</script>
+</body>
+</html>
