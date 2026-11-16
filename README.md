@@ -1,12 +1,13 @@
-### Usama Rehman — solo platform engineer
+Usama Rehman — independent engineer in Hyderabad, Pakistan (UTC+5).
 
-I build and operate **production AI platforms**. Solo — backend, frontend, mobile, infra, end to end.
+I build the CRM, the automations and the AI agents a business runs on, deploy them on a server the client owns, and stay on to run them. One roofing company in Maryland has kept me for three years.
 
-- 5 platforms I own and operate · 8 client systems shipped (under NDA)
-- Stack: FastAPI · React 19 · Flutter · Postgres · Docker · n8n · OpenAI / Claude
-- Top Rated Plus on Upwork — $200K+ earned, 100% JSS, 47 contracts
-- Based in Hyderabad, PK · open to multi-month engagements
+• Stack: Python · TypeScript · FastAPI · Flask · React · SolidJS · PostgreSQL · Redis · Docker Compose · Claude API / Claude Code · OpenAI · VAPI
+• How I work: ordinary code in a repo the client owns, one server in the client's own cloud account (about $25 a month), encrypted backups and a written runbook. Built with Claude Code; architecture and review by me; test-gated pipeline with automatic rollback.
+• My products: ShipDeck (https://app.shipdeck.dev, public beta), Runova, SureCaller, Hisaab
+• Top Rated Plus on Upwork — 46 completed jobs, 5,000+ hours, 100% Job Success
+• I work US and Australian business hours.
 
-**[usamarehman.dev](https://www.usamarehman.dev)** · [Upwork](https://www.upwork.com/freelancers/usamamughal95) · [X](https://x.com/usamarehman_dev)
+Upwork · LinkedIn · X
 
-> What I don't do: connect three tools with Zapier and call it an AI strategy. If your AI pilot failed, the problem was usually the process, not the model.
+> If a cheap off-the-shelf tool is the better answer, I'll say so.
